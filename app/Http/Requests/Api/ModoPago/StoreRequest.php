@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Api\Clientes;
+namespace App\Http\Requests\Api\ModoPago;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
@@ -8,7 +8,7 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\JsonResponse;
 
-class UpdateRequest extends FormRequest
+class StoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,19 +25,13 @@ class UpdateRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
-    {
+    public function rules(){
         return [
-            'nombre' => 'required|min:5|max:20',
-            'apellido' => 'required',
-            'direccion' => 'required',
-            'fecha_nacimiento' => 'required',
-            'telefono' => 'required',
-            'email' => 'required'
+            'nombre' => 'required|string|max:20',
+            'descripcion' => 'string'
         ];
     }
-    protected function failedValidation(Validator $validator)
-    { 
+    protected function failedValidation(Validator $validator){
         $errors = (new ValidationException($validator))->errors();
         throw new HttpResponseException(response()->json(
             [

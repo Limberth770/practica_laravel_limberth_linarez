@@ -22,3 +22,9 @@ Route::get('clientes/{cliente}/', 'Api\ClienteController@show');
 Route::post('clientes/', 'Api\ClienteController@store');
 Route::put('clientes/{cliente}/', 'Api\ClienteController@update');
 Route::delete('clientes/{cliente}/', 'Api\ClienteController@destroy');
+
+Route::apiResource('categorias','Api\CategoriaController');
+Route::apiResource('modopagos','Api\ModoPagoController');
+Route::apiResource('facturas','Api\FacturaController');
+Route::apiResource('productos','Api\ProductoController');
+Route::apiResource('detalles','Api\DetalleController');

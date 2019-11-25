@@ -30,6 +30,7 @@ class StoreRequest extends FormRequest
         return [
             'nombre' => 'required|min:5|max:20',
             'apellido' => 'required',
+            'direccion' => 'required',
             'fecha_nacimiento' => 'required',
             'telefono' => 'required',
             'email' => 'required'

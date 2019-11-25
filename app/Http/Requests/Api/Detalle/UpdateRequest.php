@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Api\Clientes;
+namespace App\Http\Requests\Api\Detalle;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
@@ -28,12 +28,10 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre' => 'required|min:5|max:20',
-            'apellido' => 'required',
-            'direccion' => 'required',
-            'fecha_nacimiento' => 'required',
-            'telefono' => 'required',
-            'email' => 'required'
+            'id_factura' => 'required|integer',
+            'id_producto' => 'required|integer',
+            'cantidad' => 'required|integer',
+            'precio' => 'required|integer'
         ];
     }
     protected function failedValidation(Validator $validator)
