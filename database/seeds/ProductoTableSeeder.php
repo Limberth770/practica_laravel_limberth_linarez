@@ -13,7 +13,7 @@ class ProductoTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('productos')->truncate();
+        //DB::table('productos')->truncate();
 
         DB::table('productos')->insert([
             'id_categoria' => 1,
