@@ -13,7 +13,7 @@ class DetalleTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('detalles')->truncate();
+        //DB::table('detalles')->truncate();
 
         DB::table('detalles')->insert([
             'id_factura' => 1,
