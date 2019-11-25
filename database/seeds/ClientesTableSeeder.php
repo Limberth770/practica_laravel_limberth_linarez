@@ -13,7 +13,7 @@ class ClientesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('clientes')->truncate();
+        //DB::table('clientes')->truncate();
 
         DB::table('clientes')->insert([
             'nombre' => 'Limberth',
