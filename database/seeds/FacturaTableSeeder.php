@@ -13,7 +13,7 @@ class FacturaTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('facturas')->truncate();
+        //DB::table('facturas')->truncate();
 
         DB::table('facturas')->insert([
             'id_cliente' => 1,
