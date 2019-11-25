@@ -13,7 +13,7 @@ class ModoPagoTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('modo_pagos')->truncate();
+        //DB::table('modo_pagos')->truncate();
 
         DB::table('modo_pagos')->insert([
             'nombre' => 'Contado',
