@@ -13,7 +13,7 @@ class CategoriaTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categorias')->truncate();
+        //DB::table('categorias')->truncate();
 
         DB::table('categorias')->insert([
             'nombre' => 'Televisores',
