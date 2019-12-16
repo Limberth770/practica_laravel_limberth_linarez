@@ -19,7 +19,7 @@ class CreateFacturasTable extends Migration
             $table->unsignedBigInteger('id_pago');
             $table->timestamps();
             $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_pago')->references('id')->on('modo_pagos')->onDelete('cascade')->onUpdate('cascade');;
+            $table->foreign('id_pago')->references('id')->on('modo_pagos')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
